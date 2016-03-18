@@ -36,7 +36,7 @@ public class Translation {
         //get result to an array list
         ArrayList<String> listValues = new ArrayList<String>();
 
-        //get the Item tag's attribute value
+    //get the Item tag's attribute value
         for (int i = 0; i < nameNodesList.getLength(); i++) {
             listValues.add(nameNodesList.item(i).getAttributes().getNamedItem("value").getNodeValue());
         }
