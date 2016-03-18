@@ -76,7 +76,7 @@
         <tr>
             <td>
             <br />
-            <h5>Powered by Yandex.Translate <a href="http://translate.yandex.com/">http://translate.yandex.com/</a></h5>
+            <h5>Powered by Yandex.Translate<a href="http://translate.yandex.com/">http://translate.yandex.com/</a></h5>
             </td>
         </tr>
     </form>
