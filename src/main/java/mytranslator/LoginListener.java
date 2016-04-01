@@ -12,15 +12,17 @@ public class LoginListener implements ServletContextListener {
      */
 
     public void contextInitialized(ServletContextEvent event) {
+        /**
+         * object creation from propertyReader
+         */
+        PropertyReader propobj = new PropertyReader();
 
-        ServletContext sc = event.getServletContext();
+        String dburl = propobj.getproperty("db.url"); //  url of the database
+        String database = propobj.getproperty("db.database");//database name
+        String dbUname = propobj.getproperty("db.db_uname");// user name for database
+        String dbPasswd = propobj.getproperty("db.db_pswd");// password for the database
 
-        String dburl = sc.getInitParameter("dburl");//  url of the database
-        String dbUname = sc.getInitParameter("db_uname");// user name for database
-        String dbPasswd = sc.getInitParameter("db_pswd");// password for the database
-        String databse = sc.getInitParameter("database");//database name
-        Database db = new Database(dburl + databse, dbUname, dbPasswd);
-        sc.setAttribute("db", db);
+        Database db = new Database(dburl, database, dbUname, dbPasswd);
     }
 
     public void contextDestroyed(ServletContextEvent arg1) {
@@ -28,10 +30,10 @@ public class LoginListener implements ServletContextListener {
          * Database connection close in the centext destroy
          */
         Connection conn = Database.getConn();
-        if (conn != null){
+        if (conn != null) {
             try {
                 conn.close();
-            }catch (SQLException ex){
+            } catch (SQLException ex) {
                 ex.printStackTrace();
             }
         }

@@ -1,0 +1,39 @@
+.modal-header, h4, .close {
+      background-color: #aa80ff;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+ .modal-footer {
+      background-color: #f9f9f9;
+  }
+ .jumbotron{
+          background: url(../images/soft_white_background.jpg) center center;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+  }
+
+    #translatebody{
+        background-color:#898787;
+    }
+    .top-buffer {
+        margin-top:20px;
+    }
+    #trjumbotron{
+        background: url(../images/soft_white_background.jpg) center center;
+        width: 100%;
+        background-size: cover;
+    }
+    .container-fluid{
+        width:80%;
+    }
+    #divheader{
+     background-color: #aa80ff;
+          color:white !important;
+          text-align: center;
+          padding: 15px;
+    }
+    #divheader h2{
+        vertical-align: middle;
+    }

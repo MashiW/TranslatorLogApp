@@ -1,26 +1,9 @@
 <!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
-
-  <context-param>
-    <param-name>dburl</param-name>
-    <param-value>jdbc:mysql://localhost:3306/</param-value>
-  </context-param>
-  <context-param>
-    <param-name>database</param-name>
-    <param-value>db_test</param-value>
-  </context-param>
-  <context-param>
-    <param-name>db_uname</param-name>
-    <param-value>root</param-value>
-  </context-param>
-  <context-param>
-    <param-name>db_pswd</param-name>
-    <param-value>root</param-value>
-  </context-param>
+    <display-name>Archetype Created Web Application</display-name>
 
     <listener>
         <listener-class>mytranslator.LoginListener</listener-class>
@@ -29,18 +12,26 @@
         <servlet-name>login</servlet-name>
         <servlet-class>mytranslator.Login</servlet-class>
     </servlet>
-  <servlet>
-    <servlet-name>translate</servlet-name>
-    <servlet-class>mytranslator.TranslateServlet</servlet-class>
-  </servlet>
+    <servlet>
+        <servlet-name>translate</servlet-name>
+        <servlet-class>mytranslator.TranslateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>mytranslator.LogoutServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>login</servlet-name>
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>translate</servlet-name>
-    <url-pattern>/TranslateServlet</url-pattern>
-  </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>translate</servlet-name>
+        <url-pattern>/TranslateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
